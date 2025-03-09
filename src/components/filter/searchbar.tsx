@@ -74,7 +74,11 @@ const Searchbar: FC = () => {
         </div>
 
         <button type="submit" className="ml-3 sm:hidden cursor-pointer">
-          <img src="/search.svg" alt="search" className="size-[40px]" />
+          <img
+            src="/search.svg"
+            alt="Araç arama formu filtrelerini uygula"
+            className="size-[40px]"
+          />
         </button>
       </div>
 
@@ -83,7 +87,11 @@ const Searchbar: FC = () => {
 
         <div className="w-full flex">
           <div className="absolute ml-3 mt-1">
-            <img src="/model-icon.png" alt="model" className="size-[25px]" />
+            <img
+              src="/model-icon.png"
+              alt="Araç modeli ikonu"
+              className="size-[25px]"
+            />
           </div>
 
           <input
@@ -96,7 +104,11 @@ const Searchbar: FC = () => {
           />
 
           <button type="submit" className="ml-3 cursor-pointer">
-            <img src="/search.svg" alt="search" className="size-[40px]" />
+            <img
+              src="/search.svg"
+              alt="Araç arama formunu gönder"
+              className="size-[40px]"
+            />
           </button>
         </div>
       </div>

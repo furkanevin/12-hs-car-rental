@@ -30,7 +30,11 @@ const Card: FC<Props> = ({ car }) => {
 
       {/* araç resmi */}
       <div>
-        <img src={generateImage(car)} alt={car.model} className="w-full h-full object-contain min-h-[200px]" />
+        <img
+          src={generateImage(car)}
+          alt={`${car.make} ${car.model} ${car.year} - araç görünümü`}
+          className="w-full h-full object-contain min-h-[200px]"
+        />
       </div>
 
       {/* temel bilgiler */}
@@ -39,8 +43,16 @@ const Card: FC<Props> = ({ car }) => {
           <Info car={car} />
         </div>
 
-        <motion.div initial={{ scale: 0.5 }} whileInView={{ scale: 1 }} className="hidden group-hover:block">
-          <Button text="Daha Fazla" designs="w-full text-white mt-[0.5px]" fn={() => setIsOpen(true)} />
+        <motion.div
+          initial={{ scale: 0.5 }}
+          whileInView={{ scale: 1 }}
+          className="hidden group-hover:block"
+        >
+          <Button
+            text="Daha Fazla"
+            designs="w-full text-white mt-[0.5px]"
+            fn={() => setIsOpen(true)}
+          />
         </motion.div>
       </div>
 

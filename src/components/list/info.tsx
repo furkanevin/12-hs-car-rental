@@ -11,14 +11,17 @@ const Info: FC<Props> = ({ car }) => {
     {
       icon: "/steering-wheel.svg",
       text: car.trany,
+      alt: "Şanzıman tipi ikonu",
     },
     {
       icon: "/tire.svg",
       text: car.drive,
+      alt: "Sürüş sistemi ikonu",
     },
     {
       icon: "/calendar.svg",
       text: car.year,
+      alt: "Üretim yılı ikonu",
     },
   ];
 
@@ -37,15 +40,16 @@ const Info: FC<Props> = ({ car }) => {
 
   return (
     <div className="w-full flex justify-between">
-      {arr.map(({ icon, text }, i) => (
+      {arr.map(({ icon, text, alt }, i) => (
         <motion.div
+          key={i}
           custom={i}
           variants={navVariants}
           initial="hidden"
           whileInView="visible"
           className="flex-center flex-col"
         >
-          <img src={icon} className="size-[25px]" />
+          <img src={icon} alt={alt} className="size-[25px]" />
           <p className="text-center">{text}</p>
         </motion.div>
       ))}

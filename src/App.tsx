@@ -10,9 +10,11 @@ const App: FC = () => {
       <div className="min-h-screen bg-dark-gray text-white">
         <Header />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
       </div>
       <Analytics />
     </BrowserRouter>
