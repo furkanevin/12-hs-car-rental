@@ -2,6 +2,7 @@ import { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/header";
 import Home from "./pages/home";
+import { Analytics } from "@vercel/analytics/react";
 
 const App: FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: FC = () => {
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
+      <Analytics />
     </BrowserRouter>
   );
 };
